@@ -23,4 +23,7 @@ OpenJDK Runtime Environment (build 12+33)
 OpenJDK 64-Bit Server VM (build 12+33, mixed mode, sharing)
 < cd nand2tetris/tools
 < ./HardwareSimulator.sh
+# load CHIP で hdl ファイルを読み込む
+# load script で tst ファイルを読み込む
+# Run で tst スクリプトを走らせて、HDL ファイルが正しいふるまいをしているかチェックする
 ```
