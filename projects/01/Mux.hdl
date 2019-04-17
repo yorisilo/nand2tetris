@@ -3,16 +3,20 @@
 // by Nisan and Schocken, MIT Press.
 // File name: projects/01/Mux.hdl
 
-/** 
+/**
  * Multiplexor:
  * out = a if sel == 0
  *       b otherwise
  */
 
 CHIP Mux {
-    IN a, b, sel;
-    OUT out;
+  IN a, b, sel;
+  OUT out;
 
-    PARTS:
+  PARTS:
     // Put your code here:
+    Not(in=sel, out=notsel);
+    And(a=notsel, b=a, out=alpha);
+    And(a=sel, b=b, out=beta);
+    Or(a=alpha, b=beta, out=out);
 }
